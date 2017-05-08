@@ -31,16 +31,12 @@ public class view extends JFrame {
             UIManager
                     .setLookAndFeel("com.sun.java.swing.plaf.windows.WindowsLookAndFeel");
         } catch (ClassNotFoundException e) {
-            // TODO Auto-generated catch block
             e.printStackTrace();
         } catch (InstantiationException e) {
-            // TODO Auto-generated catch block
             e.printStackTrace();
         } catch (IllegalAccessException e) {
-            // TODO Auto-generated catch block
             e.printStackTrace();
         } catch (UnsupportedLookAndFeelException e) {
-            // TODO Auto-generated catch block
             e.printStackTrace();
         }
         SwingUtilities.updateComponentTreeUI(this);
@@ -51,7 +47,14 @@ public class view extends JFrame {
         if (val[0].equals("Oracle")) {
             comboBox.addItem("Oracle");
             comboBox.addItem("SqlServer");
+            comboBox.addItem("MySql");
+
+        } else if (val[0].equals("SqlServer")) {
+            comboBox.addItem("SqlServer");
+            comboBox.addItem("Oracle");
+            comboBox.addItem("MySql");
         } else {
+            comboBox.addItem("MySql");
             comboBox.addItem("SqlServer");
             comboBox.addItem("Oracle");
         }
